@@ -1,3 +1,9 @@
+.PostDetails-header {
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
 .Comment-holder {
   display: flex;
   flex-direction: column;
@@ -6,13 +12,36 @@
 }
 
 .Comment {
-  width: 98.5%;
+  /* width: 98.5%; */
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  border-style: solid;
-  border-width: thin;
-  padding: 0.5%;
-  margin-bottom: 0.2%
+  /* border-style: solid;
+  border-width: thin; */
+  border: 1px solid #ccc;
+  padding: 2%;
+  margin: 0 auto 1%;
+  /* margin-bottom: 0.5% */
+}
+
+.Comment-name {
+  font-weight: bold;
+}
+.Comment-email {
+  font-style: italic;
+}
+
+@media screen and (max-width: 1300px) {
+  .Comment {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Comment {
+    width: 90%;
+    margin: 0 auto 2%;
+  }
 }

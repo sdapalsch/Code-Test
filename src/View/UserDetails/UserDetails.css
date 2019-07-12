@@ -1,8 +1,13 @@
+.UserDetails-header {
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+}
 .User-info-holder {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 .User-info-heading {
   font-weight: bold;

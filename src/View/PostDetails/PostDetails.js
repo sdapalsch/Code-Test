@@ -9,13 +9,13 @@ function PostDetails(props) {
   let author = props.users.find(u => u.id == post.userId)
   return (
     <div className="PostDetails">
-      <header>
+      <header className="PostDetails-header">
         <Link to="/">Home</Link>
         <h2 className="Post-title">{post.title}</h2>
+        <span>by <Link className="Post-author" to={"/user/" + post.userId}>{author.username}</Link></span>
+        <p className="Post-body">{post.body}</p>
+        <h2>Comments</h2>
       </header>
-      <span>by <Link className="Post-author" to={"/user/" + post.userId}>{author.username}</Link></span>
-      <p className="Post-body">{post.body}</p>
-      <h2>Comments</h2>
       <div className="Comment-holder">
         {props.comments.map((comment) => {
           return <Comment name={comment.name} email={comment.email} commentBody={comment.body} />
