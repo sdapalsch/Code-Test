@@ -1,0 +1,18 @@
+.Comment-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Comment {
+  width: 98.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-style: solid;
+  border-width: thin;
+  padding: 0.5%;
+  margin-bottom: 0.2%
+}

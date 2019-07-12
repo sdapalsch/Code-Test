@@ -30,17 +30,13 @@ let apiData = {"posts":[],"comments":[],"users":[]}
 
 Promise.all([postRequest, commentRequest, userRequest])
   .then((values) => {
-    console.log('got data')
     apiData["posts"] = values[0]
     apiData["comments"] = values[1]
     apiData["users"] = values[2]
     return apiData
   })
   .then((data) => {
-    console.log(data)
-    let action = actionCreators.loadData(data)
-    console.log(action)
-    store.dispatch(action)
+    store.dispatch(actionCreators.loadData(data))
   })
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

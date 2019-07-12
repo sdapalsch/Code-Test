@@ -11,7 +11,7 @@ function Posts(props) {
       </header>
       <div className="Post-Holder">
         {props.posts.map((post) => {
-          return <Post id={post.id} title={post.title} userId={post.userId} author={props.users.find( u => u.id === post.userId ).username} postBody={post.body} />
+          return <Post id={post.id} title={post.title} userId={post.userId} author={props.users.find( u => u.id == post.userId ).username} postBody={post.body} />
         })}
       </div>
     </div>
