@@ -1,16 +1,23 @@
-import React from 'react';
-import './Posts.css';
-import logo from '../../logo.svg';
+import React from 'react'
+import { connect } from 'react-redux'
+import './Posts.css'
 
-function Posts() {
+function Posts(props) {
   return (
     <div className="Posts">
       <header className="Posts-header">
-        <img src={logo} className="React-logo" alt="logo" />
-        <h1>Loading</h1>
+        <h1>Posts</h1>
       </header>
     </div>
-  );
+  )
 }
 
-export default Posts;
+let connectedPosts = connect((state, ownProps) => {
+  return {
+    ...ownProps,
+    posts: state.posts,
+    users: state.users
+  }
+})(Posts)
+
+export default connectedPosts
