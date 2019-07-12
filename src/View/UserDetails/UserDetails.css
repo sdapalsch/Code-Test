@@ -1,0 +1,10 @@
+.User-info-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.User-info-heading {
+  font-weight: bold;
+  margin-top: 1%;
+}

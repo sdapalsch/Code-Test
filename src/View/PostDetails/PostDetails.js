@@ -5,10 +5,7 @@ import Comment from './Components/Comment.js'
 import './PostDetails.css'
 
 function PostDetails(props) {
-  console.log(props.match.params.id)
-  console.log(props.posts)
   let post = props.posts.find(p => p.id == props.match.params.id)
-  console.log(post)
   let author = props.users.find(u => u.id == post.userId)
   return (
     <div className="PostDetails">
