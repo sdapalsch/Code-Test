@@ -1,12 +1,19 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import { connect } from 'react-redux'
 import Comment from './Components/Comment.js'
 import './PostDetails.css'
 
 function PostDetails(props) {
   let post = props.posts.find(p => p.id == props.match.params.id)
-  let author = props.users.find(u => u.id == post.userId)
+  let author = null
+  if (post) {
+    author = props.users.find(u => u.id == post.userId)
+  }
+  
+  if (!post || !author) {
+    return <Redirect to="/" />
+  }
   return (
     <div className="PostDetails">
       <header className="PostDetails-header">

@@ -1,10 +1,14 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import { connect } from 'react-redux'
 import './UserDetails.css'
 
 function UserDetails(props) {
   let user = props.users.find(p => p.id == props.match.params.id)
+
+  if (!user) {
+    return <Redirect to="/" />
+  }
   return (
     <div className="UserDetails">
       <header className="UserDetails-header">
