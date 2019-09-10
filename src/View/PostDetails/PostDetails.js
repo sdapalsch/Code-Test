@@ -18,7 +18,7 @@ function PostDetails(props) {
       </header>
       <div className="Comment-holder">
         {props.comments.map((comment) => {
-          return <Comment name={comment.name} email={comment.email} commentBody={comment.body} />
+          return comment.postId === post.id ? <Comment name={comment.name} email={comment.email} commentBody={comment.body} /> : ''
         })}
       </div>
     </div>
