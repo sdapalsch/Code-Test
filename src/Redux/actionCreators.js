@@ -11,6 +11,9 @@ export const loadData = (data) => {
   if (!data || !data.posts || !data.comments || !data.users) {
     console.log('missing data')
     console.log(data)
+    return {
+      type: actionTypes.UNUSED
+    }
   }
   return {
     type: actionTypes.LOAD_DATA,

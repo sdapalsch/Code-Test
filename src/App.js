@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom"
+import {HashRouter as Router, Route, Switch, Redirect } from "react-router-dom"
 import Posts from './View/Posts/Posts.js'
 import PostDetails from './View/PostDetails/PostDetails.js'
 import UserDetails from './View/UserDetails/UserDetails.js'
